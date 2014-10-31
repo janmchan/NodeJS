@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Javascript</title>
+	<script src="http://code.jquery.com/qunit/qunit-1.14.0.js" type="text/javascript"></script>
+	<link href="http://code.jquery.com/qunit/qunit-1.14.0.css" rel="stylesheet"></link>
+</head>
+  <body>
+	<div id="qunit"></div>
+
+	  <div id="qunit-fixture"></div>
+
+
+</body>
+
+
+</html>
+
+
+<script type='text/javascript'>//<![CDATA[ 
+	module("equal assertion");
+	test("equal pass", function () {
+		equal(1+1,2,"equal pass");
+	});
+	test("equal fail", function () {
+		equal(1+1,7,"equal pass");
+	});
+	module("deep equal assertion");
+	test("deepEqual pass", function () {
+		deepEqual([1,2],[1,2]);
+	});
+	test("deepEqual fail", function () {
+		deepEqual([1,2],[1,4]);
+	});
+</script>
+
