@@ -36,8 +36,8 @@ var port = process.env.PORT || 1337;
       }
       catch(ex)
       {
-           response.writeHead(500, {"Content-Type": "text/plain"});
-                    response.write("Error has occured Not Found\n");
+           response.writeHead(200, {"Content-Type": "text/plain"});
+                    response.write("Error has occured please see message.\n");
                     response.write(ex.Message);
                     response.end();
                     return;
