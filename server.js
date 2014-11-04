@@ -12,7 +12,7 @@ var port = process.env.PORT || 1337;
       {
             var uri = url.parse(request.url).pathname;
             var filename = path.join(process.cwd(), uri);
-            if(filename === '/')
+            if(uri === '/')
             {
                  response.writeHead(200, {"Content-Type": "text/plain"});
                     response.write("Welcome to Jan's Node JS Website");
