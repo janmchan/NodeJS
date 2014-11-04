@@ -4,7 +4,9 @@ var sys = require("sys"),
     path = require("path"),
     fs = require("fs");
 
-function start() {
+var port = process.env.PORT || 1337;
+
+//function start() {
   function onRequest(request, response) {
      var uri = url.parse(request.url).pathname;
     var filename = path.join(process.cwd(), uri);
@@ -31,8 +33,8 @@ function start() {
     });
   }
 
-  http.createServer(onRequest).listen(8888);
+  http.createServer(onRequest).listen(port);
   console.log("Server has started.");
-}
+//}
 
-exports.start = start;
+//exports.start = start;
